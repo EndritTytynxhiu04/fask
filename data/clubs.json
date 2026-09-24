@@ -1,0 +1,11 @@
+{
+  "isDemo": true,
+  "clubs": [
+    { "id": "klubi-01", "name": "Auto Klubi 01", "city": "Prishtinë", "disciplines": ["Gara malore", "Auto sllallom"], "logo": "", "website": "", "description": "Përshkrimi i shkurtër i klubit. Zëvendësoni këtë tekst me informacionin e klubit tuaj." },
+    { "id": "klubi-02", "name": "Auto Klubi 02", "city": "Prizren", "disciplines": ["Auto sllallom"], "logo": "", "website": "", "description": "Përshkrimi i shkurtër i klubit dhe veprimtarisë së tij." },
+    { "id": "klubi-03", "name": "Auto Klubi 03", "city": "Pejë", "disciplines": ["Gara malore"], "logo": "", "website": "", "description": "Përshkrimi i shkurtër i klubit dhe veprimtarisë së tij." },
+    { "id": "klubi-04", "name": "Auto Klubi 04", "city": "Ferizaj", "disciplines": ["Drag Race", "Drift"], "logo": "", "website": "", "description": "Përshkrimi i shkurtër i klubit dhe veprimtarisë së tij." },
+    { "id": "klubi-05", "name": "Auto Klubi 05", "city": "Gjilan", "disciplines": ["Karting"], "logo": "", "website": "", "description": "Përshkrimi i shkurtër i klubit dhe veprimtarisë së tij." },
+    { "id": "klubi-06", "name": "Auto Klubi 06", "city": "Gjakovë", "disciplines": ["E-sport"], "logo": "", "website": "", "description": "Përshkrimi i shkurtër i klubit dhe veprimtarisë së tij." }
+  ]
+}

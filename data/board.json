@@ -1,0 +1,14 @@
+{
+  "isDemo": true,
+  "term": "2025–2029",
+  "members": [
+    { "id": "kryetar", "name": "Emri Mbiemri", "role": "Kryetar", "photo": "", "bio": "Këtu vendosni biografinë e shkurtër të kryetarit të federatës." },
+    { "id": "nenkryetar-1", "name": "Emri Mbiemri", "role": "Nënkryetar", "photo": "", "bio": "Këtu vendosni biografinë e shkurtër të anëtarit." },
+    { "id": "nenkryetar-2", "name": "Emri Mbiemri", "role": "Nënkryetar", "photo": "", "bio": "Këtu vendosni biografinë e shkurtër të anëtarit." },
+    { "id": "anetar-1", "name": "Emri Mbiemri", "role": "Anëtar i bordit", "photo": "", "bio": "Këtu vendosni biografinë e shkurtër të anëtarit." },
+    { "id": "anetar-2", "name": "Emri Mbiemri", "role": "Anëtar i bordit", "photo": "", "bio": "Këtu vendosni biografinë e shkurtër të anëtarit." },
+    { "id": "anetar-3", "name": "Emri Mbiemri", "role": "Anëtar i bordit", "photo": "", "bio": "Këtu vendosni biografinë e shkurtër të anëtarit." },
+    { "id": "anetar-4", "name": "Emri Mbiemri", "role": "Anëtar i bordit", "photo": "", "bio": "Këtu vendosni biografinë e shkurtër të anëtarit." },
+    { "id": "anetar-5", "name": "Emri Mbiemri", "role": "Anëtar i bordit", "photo": "", "bio": "Këtu vendosni biografinë e shkurtër të anëtarit." }
+  ]
+}
