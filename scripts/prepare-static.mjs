@@ -21,6 +21,11 @@ assert.equal(new Set(calendar.events.map(x=>x.id)).size, calendar.events.length)
 for(const event of calendar.events){
   assert.ok(!Number.isNaN(Date.parse(event.startDate)) && !Number.isNaN(Date.parse(event.endDate)));
   assert.ok(event.endDate >= event.startDate, `Invalid date range: ${event.id}`);
+  // Every race linked to KS Timing needs its imported results file (run `npm run results`).
+  if (event.results) {
+    const results = JSON.parse(await fs.readFile(path.join(root, 'results', event.id + '.json'), 'utf8').catch(() => assert.fail(`Missing results for ${event.id}: run npm run results`)));
+    assert.ok(results.kind === 'drag' ? results.divisions.length : results.rows.length, `Empty results: ${event.id}`);
+  }
 }
 // Catch broken navigation and missing assets in the actual exported HTML.
 for (const route of ['', 'bordi', 'klubet', 'kalendari', 'dokumentet', 'lajmet']) {

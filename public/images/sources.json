@@ -194,5 +194,13 @@
     "dimensions": "2048x1365",
     "credit": "FASK Kosova",
     "description": "Yellow Peugeot 106 #34 at Prizren auto slalom, mountains behind; FASK watermark bottom-right"
+  },
+  {
+    "file": "kstiming.png",
+    "page": "https://kstiming.com/",
+    "image": "https://kstiming.com/img/kstiming.png",
+    "dimensions": "273x78",
+    "credit": "KS Timing",
+    "description": "KS Timing logo (blue on white, not transparent). Used unmodified as the timing-provider credit in the race results window, linking to the source results."
   }
 ]

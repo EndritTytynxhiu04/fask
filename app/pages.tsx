@@ -1,9 +1,10 @@
 'use client';
-import { useState } from 'react';
-import { ArrowUpRight, MapPin, Flag, FileText, Download, CalendarDays, Users, Check } from 'lucide-react';
+import { useEffect, useState } from 'react';
+import { ArrowUpRight, MapPin, Flag, FileText, Download, CalendarDays, Users, Check, Trophy } from 'lucide-react';
 import { NativeSelect, NativeSelectOptGroup, NativeSelectOption } from '@/components/ui/native-select';
 import { FacebookFeed } from './facebook-feed';
 import { Shell, PageHeading, SectionHeading } from './site';
+import { ResultsDialog } from './results';
 import { FACEBOOK, SEASON, events, useToday, dayRange, monthName, dateLabel, daysUntil, type RaceEvent } from './config';
 import clubsData from '@/data/clubs.json';
 import boardData from '@/data/board.json';
@@ -42,13 +43,15 @@ export function ClubsPage(){
   </section></Shell>;
 }
 
-function EventRow({event, status}: {event: RaceEvent; status?: 'past' | 'next'}) {
- return <article className={'event-row' + (status ? ' is-' + status : '')}>
+function EventRow({event, status, onResults}: {event: RaceEvent; status?: 'past' | 'next'; onResults?: (event: RaceEvent) => void}) {
+ const hasResults = status === 'past' && Boolean(event.results) && Boolean(onResults);
+ return <article className={'event-row' + (status ? ' is-' + status : '') + (hasResults ? ' has-results' : '')}>
   <div className="event-date"><strong>{dayRange(event)}</strong><span>{monthName(event.startDate)}</span></div>
   <div className="event-main"><span className="role">{event.discipline}</span><h3>{event.name}</h3>
    <div className="event-meta"><span className="location"><MapPin size={15}/>{event.location}</span>{event.organizer && <span className="location"><Users size={15}/>{event.organizer}</span>}</div>
   </div>
-  {status === 'past' && <span className="event-badge"><Check size={14}/> Përfunduar</span>}
+  {hasResults && <button type="button" className="event-badge results" onClick={() => onResults!(event)} aria-label={'Shiko rezultatet: ' + event.name}><Trophy size={14}/> Rezultatet</button>}
+  {status === 'past' && !hasResults && <span className="event-badge"><Check size={14}/> Përfunduar</span>}
   {status === 'next' && <span className="event-badge next">E radhës</span>}
  </article>;
 }
@@ -59,6 +62,16 @@ export function CalendarPage(){
  const done = today ? events.filter(event => event.endDate < today).length : 0;
  const byMonth = events.reduce<Record<string, RaceEvent[]>>((groups, event) => { (groups[event.startDate.slice(0, 7)] ??= []).push(event); return groups; }, {});
  const daysLeft = next && today ? daysUntil(next.startDate, today) : 0;
+ const [shown, setShown] = useState<RaceEvent | null>(null);
+ const [resultsOpen, setResultsOpen] = useState(false);
+ const showResults = (event: RaceEvent) => { setShown(event); setResultsOpen(true); history.replaceState(null, '', '#rezultatet-' + event.id); };
+ const closeResults = (open: boolean) => { setResultsOpen(open); if (!open) history.replaceState(null, '', location.pathname + location.search); };
+ // A shared link such as /kalendari/#rezultatet-kulla opens that race's results directly.
+ useEffect(() => {
+  const id = location.hash.startsWith('#rezultatet-') ? decodeURIComponent(location.hash.slice(12)) : '';
+  const event = events.find(item => item.id === id && item.results);
+  if (event) { setShown(event); setResultsOpen(true); }
+ }, []);
  return <Shell active="Kalendari"><PageHeading section={'KAMPIONATI I KOSOVËS / '+SEASON} title={'Kalendari '+SEASON} text="Një sezon plot adrenalinë. Datat, disiplinat dhe vendet e garave."/>
   <section className="container section">
    <div className="calendar-toolbar"><div className="eyebrow"><span/>{calendarData.isComplete?'KALENDARI I GARAVE':'GARA TË KONFIRMUARA'}</div>
@@ -72,9 +85,10 @@ export function CalendarPage(){
    {calendarData.note&&<div className="notice"><CalendarDays size={22}/><p>{calendarData.note}</p></div>}
    {Object.entries(byMonth).map(([month, list]) => <section className="event-month" key={month} aria-label={monthName(month + '-01')}>
     <h2 className="event-month-title">{monthName(month + '-01')} <span>{list.length} {list.length === 1 ? 'garë' : 'gara'}</span></h2>
-    <div className="event-list">{list.map(event => <EventRow key={event.id} event={event} status={event === next ? 'next' : today && event.endDate < today ? 'past' : undefined}/>)}</div>
+    <div className="event-list">{list.map(event => <EventRow key={event.id} event={event} status={event === next ? 'next' : today && event.endDate < today ? 'past' : undefined} onResults={showResults}/>)}</div>
    </section>)}
    {!events.length&&<div className="empty-state">Kalendari i këtij viti do të publikohet së shpejti.</div>}
+   <ResultsDialog event={shown} open={resultsOpen} onOpenChange={closeResults}/>
    <div className="calendar-bottom"><p>Ndiqni njoftimet e federatës për çdo ndryshim të datave.</p><a className="text-link" href={calendarData.sourceUrl} target="_blank" rel="noreferrer">Njoftimi zyrtar në Facebook <ArrowUpRight size={18}/></a></div>
   </section></Shell>;
 }

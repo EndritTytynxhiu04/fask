@@ -38,6 +38,18 @@ Edit the `members` array in `data/board.json`; add or remove entries as needed. 
 
 Edit `data/calendar.json`. Use ISO dates (`YYYY-MM-DD`) for both `startDate` and `endDate`; a single-day event uses the same date twice. Each event has a unique `id`, `name`, `discipline`, `location` and an `organizer`. The top-level `sourceUrl` links to the official calendar post. Events sort chronologically automatically. Change `year`, `note`, and `isComplete` as appropriate; `year` also sets the season shown in the header, hero and homepage. Finished races, the next race and its countdown are worked out in the visitor's browser from today's date, so they stay correct without rebuilding. The current calendar contains all 21 events transcribed from the official FASK 2026 calendar image provided through https://www.facebook.com/share/p/19jZmgEb1V/ (canonical post: https://www.facebook.com/FASKKOSOVA/posts/1642118111249817/). The original image is saved at `public/images/calendar-2026.jpg`. The 20 September karting location and Kruja organizer are blank in the source; these were not invented. Dates reflect this published calendar and may be superseded by later announcements. Calendar content does not auto-sync; the news feed does.
 
+### Race results from KS Timing
+
+Finished races with a `results` link in `data/calendar.json` show a **Rezultatet** badge; clicking the race opens its results (podium, class filter and full timing table, or the Drag Race heats by AWD / FWD-RWD and class). A link such as `/kalendari/#rezultatet-kulla` opens a race's results directly.
+
+To add results after a race:
+
+1. Open https://kstiming.com/arkiva.html and copy the race's link, e.g. `https://kstiming.com/arkiva/2026/index.html?g=m/KullaM2.xml` (hill climb), `…/indexr.html?g=s/PrizrenSS3.xml` (auto slalom) or `…/Drag1/awd.html` (drag).
+2. Add it to the event in `data/calendar.json` as `"results": "<link>"`.
+3. Run `npm run results`. It downloads the data and saves `public/results/<event id>.json`; if KS Timing is unreachable, existing files are kept.
+
+The build fails if a linked race has no results file. Races that KS Timing does not time (karting, oldtimer, electric slalom) simply show **Përfunduar**.
+
 ### Documents: drop PDFs into the folder
 
 1. Put PDFs in `public/documents/` (subfolders and names with spaces or Albanian characters are supported).
@@ -46,7 +58,7 @@ Edit `data/calendar.json`. Use ISO dates (`YYYY-MM-DD`) for both `startDate` and
 
 The build automatically creates the dropdown from PDFs actually present in the folder. It derives names and file sizes, validates PDF headers, and encodes filenames correctly. No manual link updates are needed. Optionally add metadata in `data/document-details.json`, keyed by the exact relative filename. Do not edit `data/documents.generated.json` manually.
 
-When adding PDFs while the development server is already running, run `npm run documents` to refresh the list. Removing all PDFs produces a clear empty state. An authentic archived Brezovica 2025 regulation is included to demonstrate the download flow; it is clearly marked as an archive, not a 2026 regulation.
+When adding PDFs while the development server is already running, run `npm run documents` to refresh the list. Removing all PDFs produces a clear empty state.
 
 ### Automatic Facebook news
 

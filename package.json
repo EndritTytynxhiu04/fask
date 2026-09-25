@@ -14,7 +14,8 @@
     "prebuild": "node scripts/generate-documents.mjs",
     "predev": "node scripts/generate-documents.mjs",
     "documents": "node scripts/generate-documents.mjs",
-    "postbuild": "node scripts/prepare-static.mjs"
+    "postbuild": "node scripts/prepare-static.mjs",
+    "results": "node scripts/fetch-results.mjs"
   },
   "dependencies": {
     "react": "19.2.6",
