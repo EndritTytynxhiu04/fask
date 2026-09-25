@@ -1,5 +1,5 @@
 {
-    "isDemo": false,
+    "isDemo": true,
     "clubs": [
         { "id": "klubi-01", "name": "Auto Klubi Prishtina DTM", "city": "Prishtinë", "disciplines": ["Gara malore", "Auto sllallom", "Karting"], "logo": "", "website": "", "description": "" },
         { "id": "klubi-02", "name": "Auto Klubi Ferizaj", "city": "Ferizaj", "disciplines": ["Gara malore", "Auto sllallom", "Karting"], "logo": "", "website": "", "description": "" },
@@ -13,7 +13,7 @@
         { "id": "klubi-10", "name": "Auto Klubi Gjakova 137", "city": "Gjakova", "disciplines": ["Gara malore", "Auto sllallom"], "logo": "", "website": "", "description": "" },
         { "id": "klubi-11", "name": "AK Drenica", "city": "Drenica", "disciplines": ["Gara malore", "Auto sllallom"], "logo": "", "website": "", "description": "" },
         { "id": "klubi-12", "name": "Klubi i Motorsportit Digjital të Kosovës", "city": "Prishtinë", "disciplines": ["Gara malore", "Auto sllallom", "Karting", "E-sport"], "logo": "", "website": "", "description": "" },
-        { "id": "klubi-13", "name": "Auto Klubi Eurogoma Racing Team", "city": "Prishtinë", "disciplines": ["Gara malore", "Auto sllallom", "Karting"], "logo": "", "website": "", "description": "" },
+        { "id": "klubi-13", "name": "Auto Moto Club Kacandolli Racing Team", "city": "Prishtinë", "disciplines": ["Gara malore", "Auto sllallom", "Karting"], "logo": "", "website": "", "description": "" },
         { "id": "klubi-14", "name": "Spirit Karting Kosovo", "city": "Prishtinë", "disciplines": ["Gara malore", "Auto sllallom", "Karting", "E-Sport"], "logo": "", "website": "", "description": "" },
         { "id": "klubi-15", "name": "Klubi Auto Kosova -Ferizaj", "city": "Ferizaj", "disciplines": ["Gara malore", "Auto sllallom", "Karting"], "logo": "", "website": "", "description": "" },
         { "id": "klubi-16", "name": "Klubi i Sportit Rrugor Off Road Malësia", "city": "Prishtinë", "disciplines": ["Off road"], "logo": "", "website": "", "description": "" }
