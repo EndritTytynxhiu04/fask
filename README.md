@@ -80,7 +80,7 @@ Do not publish the project root or `node_modules`; publish only the static outpu
 
 ### Cloudflare Workers
 
-The Worker `fask` builds from GitHub with build command `npm run build` and deploy command `npx wrangler deploy`. After the build, `scripts/cloudflare-config.mjs` writes the deploy settings (`dist/wrangler.json`, which uploads `dist/client` as static files) and the redirect file `.wrangler/deploy/config.json` that Wrangler reads automatically. Do not add a `wrangler.jsonc`/`wrangler.toml` to the project root: vinext then expects a full Cloudflare Worker setup and the build fails.
+The Worker `fask` builds from GitHub with build command `npm run build` and deploy command `npx wrangler deploy --config dist/wrangler.json`. After the build, `scripts/cloudflare-config.mjs` writes the deploy settings (`dist/wrangler.json`, which uploads `dist/client` as static files) and the redirect file `.wrangler/deploy/config.json` that Wrangler reads automatically. Do not add a `wrangler.jsonc`/`wrangler.toml` to the project root: vinext then expects a full Cloudflare Worker setup and the build fails.
 
 Cloudflare installs with npm 10, which rejects lock files written by npm 11. After adding or updating packages, refresh the lock file with `npx npm@10.9.2 install --package-lock-only` before pushing.
 
