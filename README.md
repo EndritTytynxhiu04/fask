@@ -78,6 +78,12 @@ The output folder is `dist/client` (vinext static export). Publish that folder u
 
 Do not publish the project root or `node_modules`; publish only the static output. JSON edits and newly added PDFs require a rebuild and redeploy.
 
+### Cloudflare Workers
+
+The Worker `fask` builds from GitHub with build command `npm run build` and deploy command `npx wrangler deploy`. After the build, `scripts/cloudflare-config.mjs` writes the deploy settings (`dist/wrangler.json`, which uploads `dist/client` as static files) and the redirect file `.wrangler/deploy/config.json` that Wrangler reads automatically. Do not add a `wrangler.jsonc`/`wrangler.toml` to the project root: vinext then expects a full Cloudflare Worker setup and the build fails.
+
+Cloudflare installs with npm 10, which rejects lock files written by npm 11. After adding or updating packages, refresh the lock file with `npx npm@10.9.2 install --package-lock-only` before pushing.
+
 ### Netlify
 
 Connect the GitHub repository with `main` as the production branch. The root `netlify.toml` sets the build command, Node version and `dist/client` publish directory automatically, overriding corresponding dashboard settings. No SPA redirect or server adapter is needed because every route is exported to HTML. A successful deploy must contain `index.html` at the root in Netlify's Deploy File Explorer. If automatic deploys are paused, use Deploys > Trigger deploy after pushing.
