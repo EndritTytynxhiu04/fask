@@ -1,14 +1,14 @@
 {
     "isDemo": false,
     "clubs": [
-        { "id": "klubi-01", "name": "Auto Klubi Prishtina DTM", "city": "Prishtinë", "disciplines": ["Gara malore", "Auto sllallom", "Karting"], "logo": "/images/Klubet/DTM.jpg", "website": "", "description": "" },
+        { "id": "klubi-01", "name": "Auto Klubi Prishtina DTM", "city": "Prishtinë", "disciplines": ["Gara malore", "Auto sllallom", "Karting"], "logo": "/images/Klubet/image.png", "website": "", "description": "" },
         { "id": "klubi-02", "name": "Auto Klubi Ferizaj", "city": "Ferizaj", "disciplines": ["Gara malore", "Auto sllallom", "Karting"], "logo": "/images/Klubet/AutoKlubiFerizaj.jpg", "website": "", "description": "" },
-        { "id": "klubi-03", "name": "Auto Moto Karting Klubi Prishtinë (PRT)", "city": "Prishtinë", "disciplines": ["Gara malore", "Auto sllallom", "Karting", "E-sport"], "logo": "", "website": "", "description": "" },
+        { "id": "klubi-03", "name": "Auto Moto Karting Klubi Prishtinë (PRT)", "city": "Prishtinë", "disciplines": ["Gara malore", "Auto sllallom", "Karting", "E-sport"], "logo": "/images/Klubet/PRT.jpg", "website": "", "description": "" },
         { "id": "klubi-04", "name": "Shoqata Auto Moto Auto Klubi Prizreni D&G", "city": "Prizren", "disciplines": ["Gara malore", "Auto sllallom", "Karting", "E-sport"], "logo": "/images/Klubet/ak Prizren.png", "website": "", "description": "" },
         { "id": "klubi-05", "name": "Auto Klubi Peja Visari", "city": "Pejë", "disciplines": ["Gara malore", "Auto sllallom"], "logo": "/images/Klubet/AKPeja.png", "website": "", "description": "" },
         { "id": "klubi-06", "name": "Auto Klubi Eurogoma Racing Team", "city": "Prishtinë", "disciplines": ["Gara malore", "Auto sllallom", "Karting"], "logo": "/images/Klubet/EuroGoma.jpg", "website": "", "description": "" },
         { "id": "klubi-07", "name": "Auto Moto Touring Klubi Kombëtar", "city": "Prizren", "disciplines": ["Gara malore", "Auto sllallom", "Karting"], "logo": "/images/Klubet/AMTKK.jpg", "website": "", "description": "" },
-        { "id": "klubi-08", "name": "Auto Klubi Vjosa", "city": "Shtime", "disciplines": ["Off road"], "logo": "/images/Klubet/OFFRoadVjosa.jpg", "website": "", "description": "" },
+        { "id": "klubi-08", "name": "Auto Klubi Vjosa", "city": "Shtime", "disciplines": ["Off road"], "logo": "/images/Klubet/OFFRoadVjosa.jpg", "website": "", "description": ""  },
         { "id": "klubi-09", "name": "Auto Moto Klubi i Kosovës (AMCK)", "city": "Prishtinë", "disciplines": ["Gara malore", "Auto sllallom"], "logo": "/images/Klubet/AMCK.jpg", "website": "", "description": "" },
         { "id": "klubi-10", "name": "Auto Klubi Gjakova 137", "city": "Gjakovë", "disciplines": ["Gara malore", "Auto sllallom"], "logo": "/images/Klubet/Gjakova137.jpg", "website": "", "description": "" },
         { "id": "klubi-11", "name": "AK Drenica", "city": "Drenica", "disciplines": ["Gara malore", "Auto sllallom"], "logo": "", "website": "", "description": "" },
