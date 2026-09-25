@@ -9,6 +9,8 @@ npm ci
 npm run dev
 ```
 
+Use `npm run dev` while editing JSON or page styles. Save the file and the local development page updates automatically. `npm run start` only previews the last build in `dist/client`; it does not rebuild after edits. To refresh that preview, stop it with Ctrl+C, run `npm run build`, then `npm run start`. The published website updates after you rebuild and redeploy (or push to a GitHub-connected host configured to run the build).
+
 ## Edit your content
 
 | Content | File / folder |

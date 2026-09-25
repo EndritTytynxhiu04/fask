@@ -6,5 +6,5 @@ export const metadata: Metadata = {
   description: 'Garat, klubet, lajmet dhe dokumentet e Federatës së Auto Sportit të Kosovës.',
 };
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  return <html lang="sq"><body>{children}</body></html>;
+  return <html lang="sq" className="dark"><body>{children}</body></html>;
 }

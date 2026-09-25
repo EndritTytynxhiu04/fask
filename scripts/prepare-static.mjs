@@ -34,4 +34,11 @@ for (const route of ['', 'bordi', 'klubet', 'kalendari', 'dokumentet', 'lajmet']
     assert.match(html, /<iframe[^>]+facebook\.com\/plugins\/page\.php/);
   }
 }
-console.log(`Static checks passed: 6 pages and their links/assets, Facebook embeds, ${calendar.events.length} calendar events, ${documents.length} PDF(s).`);
+const clubs = JSON.parse(await fs.readFile('data/clubs.json', 'utf8'));
+const clubPage = await fs.readFile(path.join(root, 'klubet/index.html'), 'utf8');
+assert.equal((clubPage.match(/class="club-card"/g) || []).length, clubs.clubs.length, 'Exported club list is stale');
+const escapeHtml = value => value.replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#x27;'}[char]));
+for (const club of clubs.clubs) {
+  assert.ok(clubPage.includes(`<h3>${escapeHtml(club.name)}</h3>`), `Missing club in export: ${club.name}`);
+}
+console.log(`Static checks passed: 6 pages and their links/assets, ${clubs.clubs.length} clubs, Facebook embeds, ${calendar.events.length} calendar events, ${documents.length} PDF(s).`);
