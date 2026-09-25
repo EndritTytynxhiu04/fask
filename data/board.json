@@ -1,14 +1,16 @@
 {
-  "isDemo": true,
-  "term": "2025–2029",
-  "members": [
-    { "id": "kryetar", "name": "Emri Mbiemri", "role": "Kryetar", "photo": "", "bio": "Këtu vendosni biografinë e shkurtër të kryetarit të federatës." },
-    { "id": "nenkryetar-1", "name": "Emri Mbiemri", "role": "Nënkryetar", "photo": "", "bio": "Këtu vendosni biografinë e shkurtër të anëtarit." },
-    { "id": "nenkryetar-2", "name": "Emri Mbiemri", "role": "Nënkryetar", "photo": "", "bio": "Këtu vendosni biografinë e shkurtër të anëtarit." },
-    { "id": "anetar-1", "name": "Emri Mbiemri", "role": "Anëtar i bordit", "photo": "", "bio": "Këtu vendosni biografinë e shkurtër të anëtarit." },
-    { "id": "anetar-2", "name": "Emri Mbiemri", "role": "Anëtar i bordit", "photo": "", "bio": "Këtu vendosni biografinë e shkurtër të anëtarit." },
-    { "id": "anetar-3", "name": "Emri Mbiemri", "role": "Anëtar i bordit", "photo": "", "bio": "Këtu vendosni biografinë e shkurtër të anëtarit." },
-    { "id": "anetar-4", "name": "Emri Mbiemri", "role": "Anëtar i bordit", "photo": "", "bio": "Këtu vendosni biografinë e shkurtër të anëtarit." },
-    { "id": "anetar-5", "name": "Emri Mbiemri", "role": "Anëtar i bordit", "photo": "", "bio": "Këtu vendosni biografinë e shkurtër të anëtarit." }
-  ]
+    "isDemo": true,
+    "term": "2025–2029",
+    "members": [
+        { "id": "kryetar", "name": "Agron Dida", "role": "Kryetar", "photo": "", "bio": "" },
+        { "id": "nenkryetar-1", "name": "Ismet Rexhepi", "role": "Nënkryetar", "photo": "", "bio": "" },
+        { "id": "nenkryetar-2", "name": "Gazmend Gashi", "role": "Nënkryetar", "photo": "", "bio": "" },
+        { "id": "anetar-1", "name": "Faton Hyseni", "role": "Anëtar i bordit", "photo": "", "bio": "" },
+        { "id": "anetar-2", "name": "Bujar Hysenaj", "role": "Anëtar i bordit", "photo": "", "bio": "" },
+        { "id": "anetar-3", "name": "Blerim Gashi", "role": "Anëtar i bordit", "photo": "", "bio": "" },
+        { "id": "anetar-4", "name": "Artan Haradinaj", "role": "Anëtar i bordit", "photo": "", "bio": "" },
+        { "id": "anetar-5", "name": "Faton Tytynxhiu", "role": "Anëtar i bordit", "photo": "", "bio": "" },
+        { "id": "anetar-6", "name": "Arjeta Rysha", "role": "Anëtar i bordit", "photo": "", "bio": "" },
+        { "id": "anetar-7", "name": "Shyqeri Zatriqi", "role": "Anëtar i bordit", "photo": "", "bio": "" }
+    ]
 }
