@@ -1,5 +1,5 @@
 {
-    "isDemo": true,
+    "isDemo": false,
     "clubs": [
         { "id": "klubi-01", "name": "Auto Klubi Prishtina DTM", "city": "Prishtinë", "disciplines": ["Gara malore", "Auto sllallom", "Karting"], "logo": "/images/Klubet/DTM.jpg", "website": "", "description": "" },
         { "id": "klubi-02", "name": "Auto Klubi Ferizaj", "city": "Ferizaj", "disciplines": ["Gara malore", "Auto sllallom", "Karting"], "logo": "/images/Klubet/AutoKlubiFerizaj.jpg", "website": "", "description": "" },
