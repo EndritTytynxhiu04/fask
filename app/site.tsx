@@ -60,20 +60,20 @@ export function HomePage() {
     <Hero/>
     <section className="discipline-strip" aria-label="Disciplinat"><div className="container"><Flag size={21}/>{DISCIPLINES.map(item => <span key={item}>{item}</span>)}</div></section>
     <section className="container section home-news" id="lajmet">
-      <SectionHeading eyebrow="NGA FEDERATA" title="Lajmet e fundit." href="/lajmet/" label="Të gjitha lajmet"/>
+      <SectionHeading eyebrow="NGA FEDERATA" title="Lajmet e fundit" href="/lajmet/" label="Të gjitha lajmet"/>
       <div className="home-live-grid">
         <div className="home-editorial">
           <figure className="editorial-photo"><img src="/images/racing.jpg" alt="Garuesit dhe publiku në startin e Drag Race në Kosovë" loading="lazy"/><figcaption>Drag Race, Kosovë · Foto: Shpend Ahmeti / Autoportali</figcaption></figure>
-          <div className="home-editorial-copy"><span className="eyebrow">NGA PISTA, TE JU</span><h3>Çdo garë ka<br/>historinë e vet.</h3><p>Njoftimet, rezultatet dhe momentet e fundit, drejtpërdrejt nga faqja e federatës në Facebook.</p><a href={FACEBOOK} target="_blank" rel="noreferrer" className="text-link">FASK Kosova në Facebook <ArrowUpRight size={19}/></a></div>
+          <div className="home-editorial-copy"><span className="eyebrow">NGA PISTA, TE JU</span><h3>Çdo garë ka<br/>historinë e vet</h3><p>Njoftimet, rezultatet dhe momentet e fundit, drejtpërdrejt nga faqja e federatës në Facebook.</p><a href={FACEBOOK} target="_blank" rel="noreferrer" className="text-link">FASK Kosova në Facebook <ArrowUpRight size={19}/></a></div>
         </div>
         <FacebookFeed/>
       </div>
     </section>
     <section className="container home-tools" aria-label="Kalendari dhe dokumentet">
       <NextRaceFeature/>
-      <a href="/dokumentet/" className="documents-feature"><FileText size={36} strokeWidth={1.3}/><span className="eyebrow">PËR GARUESIT DHE KLUBET</span><h3>Gjithçka që ju duhet.<br/>Në një vend.</h3><span className="text-link">Shkarko dokumentet <ArrowRight size={20}/></span></a>
+      <a href="/dokumentet/" className="documents-feature"><FileText size={36} strokeWidth={1.3}/><span className="eyebrow">PËR GARUESIT DHE KLUBET</span><h3>Gjithçka që ju duhet<br/>në një vend</h3><span className="text-link">Shkarko dokumentet <ArrowRight size={20}/></span></a>
     </section>
-    <section className="federation-section"><div className="container federation-grid"><div><div className="eyebrow"><span/>NJË KOMUNITET. NJË QËLLIM.</div><h2>Më shumë<br/>se një garë.</h2></div><div><p>Klubet, garuesit dhe njerëzit që e çojnë përpara auto sportin e Kosovës. Njihuni me federatën dhe komunitetin tonë.</p><div className="federation-links"><a href="/bordi/">Bordi i federatës <ArrowUpRight/></a><a href="/klubet/">Klubet tona <ArrowUpRight/></a></div></div></div></section>
+    <section className="federation-section"><div className="container federation-grid"><div><div className="eyebrow"><span/>NJË KOMUNITET. NJË QËLLIM.</div><h2>Më shumë<br/>se një garë</h2></div><div><p>Klubet, garuesit dhe njerëzit që e çojnë përpara auto sportin e Kosovës. Njihuni me federatën dhe komunitetin tonë.</p><div className="federation-links"><a href="/bordi/">Bordi i federatës <ArrowUpRight/></a><a href="/klubet/">Klubet tona <ArrowUpRight/></a></div></div></div></section>
   </Shell>;
 }
 
@@ -88,7 +88,7 @@ function NextRaceFeature() {
       {next ? <>
         <h2>{next.name}</h2>
         <div className="season-next"><span className="season-countdown">{countdown(daysUntil(next.startDate, today!))}</span><span><CalendarDays size={16}/>{dateLabel(next)}</span><span><MapPin size={16}/>{next.location}</span></div>
-      </> : <h2>Shihemi<br/>në pistë.</h2>}
+      </> : <h2>Shihemi<br/>në pistë</h2>}
       <span className="text-link">Kalendari {SEASON} <ArrowUpRight size={20}/></span>
     </div>
     <span className="season-watermark" aria-hidden="true">{String(SEASON).slice(-2)}</span>

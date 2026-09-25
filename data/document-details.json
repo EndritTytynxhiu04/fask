@@ -1,7 +1,19 @@
 {
-  "Arkiv - Rregullore Brezovica 2025.pdf": {
-    "title": "Rregullore e veçantë — Brezovica 2025 (arkiv)",
-    "category": "Arkiv 2025",
-    "sourceUrl": "https://cez-motorsport.com/files/upload/_07-hc-kos-brezovica-25.pdf"
-  }
+  "1. Statuti FASK 25.01.2025.pdf": { "title": "Statuti i FASK-ut (25.01.2025)", "category": "Statuti dhe organet" },
+  "Rregullorja e punes se Bordit Ekzekutiv te FASK.pdf": { "title": "Rregullorja e punës së Bordit Ekzekutiv", "category": "Statuti dhe organet" },
+  "Rregullorja_e_Keshillit_mbikqyres.pdf": { "title": "Rregullorja e Këshillit Mbikëqyrës", "category": "Statuti dhe organet" },
+  "RREGULLORE E PUNËS SË KOMISIONIT APELUES SPORTIV.pdf": { "title": "Rregullorja e punës së Komisionit Apelues Sportiv", "category": "Statuti dhe organet" },
+  "KODI ETIK I FEDERATES SE AUTO SPORTEVE TE KOSOVES.pdf": { "title": "Kodi etik i federatës", "category": "Statuti dhe organet" },
+
+  "RREGULLORJA E PERGJITHSHME E AUTO DHE KARTING SPORTIT 2023 fin.pdf": { "title": "Rregullorja e përgjithshme e auto dhe karting sportit (2023)", "category": "Rregulloret e garave" },
+  "Rregullore e veçantë të obligimeve të klubeve dhe te garuesve 2023 fin.pdf": { "title": "Rregullorja e obligimeve të klubeve dhe garuesve (2023)", "category": "Rregulloret e garave" },
+  "FASK - Shtesa e rregullores per auto garat ne pistat malore - 2025.pdf": { "title": "Shtesa e rregullores për garat malore (2025)", "category": "Rregulloret e garave" },
+  "Shtesa e Rregullorres per disiplinen Auto Sllalom 2024.pdf": { "title": "Shtesa e rregullores për Auto Sllallom (2024)", "category": "Rregulloret e garave" },
+  "Shtesa e Rregullorres per E Auto Slalomin 2024.pdf": { "title": "Shtesa e rregullores për E-Auto Sllallom (2024)", "category": "Rregulloret e garave" },
+  "Shtesa e Rregullorres per Karting Slalom 2024.pdf": { "title": "Shtesa e rregullores për Karting Sllallom (2024)", "category": "Rregulloret e garave" },
+
+  "REGULLORE PËR REGJISTRIMIN E KLUBEVE TË REJA DHE KALIMIT TE SPORTISTEVE NE FEDERATEN E AUTO SPORTEVE TE KOSOVES.pdf": { "title": "Rregullorja për regjistrimin e klubeve dhe kalimin e sportistëve", "category": "Klubet dhe garuesit" },
+  "FASK_-_Rregullorja_e_posacme_per_pergjegjesin_disiplinore_ne_auto_dhe_karting_sporte.pdf": { "title": "Rregullorja për përgjegjësinë disiplinore", "category": "Klubet dhe garuesit" },
+  "RREGULLORE MBI MASAT PREVENTIVE DHE PARANDALUESE TË PËRDORIMIT TË DOPINGUT.pdf": { "title": "Rregullorja për parandalimin e dopingut", "category": "Klubet dhe garuesit" },
+  "RREGULLORE PER ZGJEDHJEN E LAUREATEVE TE VITIT.pdf": { "title": "Rregullorja për zgjedhjen e laureatëve të vitit", "category": "Klubet dhe garuesit" }
 }

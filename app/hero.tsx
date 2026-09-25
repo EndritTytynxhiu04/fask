@@ -4,7 +4,7 @@ import { ArrowUpRight, ArrowRight, ChevronLeft, ChevronRight, Pause, Play } from
 import { Button } from '@/components/ui/button';
 import { Carousel, CarouselContent, CarouselItem, type CarouselApi } from '@/components/ui/carousel';
 import slides from '@/data/hero-slides.json';
-import { SEASON } from './config';
+import { SEASON, events } from './config';
 
 export const SLIDE_DURATION = 7_000;
 
@@ -42,11 +42,18 @@ export function Hero(){
   return <Carousel className="hero hero-modern" opts={{loop:true, duration:35}} setApi={setApi} aria-label="Fotografitë e auto sportit të Kosovës">
     <CarouselContent className="hero-slides">{slides.map((slide,index) => <CarouselItem className={index===active?'hero-slide is-active':'hero-slide'} key={slide.image}><img src={slide.image} alt={slide.alt} className="hero-photo" style={{objectPosition:slide.position}} fetchPriority={index===0?'high':'auto'} loading={index===0?'eager':'lazy'}/></CarouselItem>)}</CarouselContent>
     <div className="hero-shade"/>
+    <div className="hero-stripes" aria-hidden="true"><span/><span/><span/></div>
+    <div className="hero-ghost" aria-hidden="true"><span key={active}>{slides[active].label}</span></div>
     <div className="container hero-content">
       <div className="eyebrow"><span/>FEDERATA E AUTO SPORTIT E KOSOVËS</div>
-      <h1>SHPEJTËSI.<br/>PRECIZION.<br/><span>PASION.</span></h1>
-      <p>Bashkë në çdo kthesë.<br/>Drejt çdo fitoreje.</p>
+      <h1 className="hero-title"><span className="hero-line"><span>Kosova</span></span><span className="hero-line"><span>në <em>pistë</em></span></span></h1>
+      <p>Garat, garuesit dhe klubet e auto sportit të Kosovës. Nga gara malore te karting, çdo kthesë fillon këtu.</p>
       <div className="hero-actions"><a href="/kalendari/" className="button yellow-button">Zbulo sezonin {SEASON} <ArrowUpRight size={21}/></a><a href="#lajmet" className="button hero-secondary">Lajmet e fundit <ArrowRight size={20}/></a></div>
+      <dl className="hero-stats">
+        <div><dt>Gara këtë sezon</dt><dd>{events.length}</dd></div>
+        <div><dt>Disciplina</dt><dd>8</dd></div>
+        <div><dt>Sezoni</dt><dd>{SEASON}</dd></div>
+      </dl>
     </div>
     <div className="hero-progress" aria-hidden="true"><span key={active} className={running?'running':''} style={{animationDuration:SLIDE_DURATION+'ms'}}/></div>
     <div className="container hero-bottom-modern">

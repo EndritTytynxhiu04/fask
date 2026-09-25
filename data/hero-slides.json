@@ -1,6 +1,17 @@
 [
-  {"image":"/images/hero.jpg","alt":"Veturë garuese në një kthesë të garës malore në Kosovë","label":"GARA MALORE","caption":"Çdo sekondë ka rëndësi.","position":"center 54%"},
-  {"image":"/images/hasanaj.jpg","alt":"Veturë Audi me numrin 29 në startin e garës","label":"NË VIJËN E STARTIT","caption":"Përkushtimi bëhet shpejtësi.","position":"center center"},
-  {"image":"/images/karting.png","alt":"Kart i gjelbër në garën e karting sllallomit në Kosovë","label":"KARTING SLLALLOM","caption":"Pasioni fillon këtu.","position":"center center"},
-  {"image":"/images/racing.jpg","alt":"Dy vetura BMW dhe publiku në startin e Drag Race","label":"DRAG RACE","caption":"Një komunitet. Një pasion.","position":"center center"}
+  {"image":"/images/hero.jpg","alt":"Veturë garuese në një kthesë të garës malore në Kosovë","label":"GARA MALORE","caption":"Çdo sekondë ka rëndësi","position":"center 54%"},
+  {"image":"/images/sllallom-sllatine-skoda.jpg","alt":"Škoda e kuqe në garën e auto sllallomit në Sllatinë, maj 2026","label":"AUTO SLLALLOM","caption":"Precizion në çdo kon","position":"center center"},
+  {"image":"/images/malore-brezovica-formula.jpg","alt":"Formula e kuqe në startin e garës malore në Brezovicë, me vetura të tjera në radhë pas saj","label":"GARA MALORE","caption":"Gati për nisje","position":"center center"},
+  {"image":"/images/karting-gara-2016.jpg","alt":"Dy karta garojnë krah për krah në pistën e kartingut","label":"KARTING","caption":"Rrotë për rrotë","position":"center 60%"},
+  {"image":"/images/malore-brezovica-subaru.jpg","alt":"Subaru Impreza blu në garën malore në Brezovicë, mes kodrave të gjelbra","label":"GARA MALORE","caption":"Mes maleve të Kosovës","position":"center center"},
+  {"image":"/images/sllallom-ferizaj-crowd.jpg","alt":"Veturë e zezë me portokalli në garën e auto sllallomit në Ferizaj, me publikun prapa","label":"AUTO SLLALLOM","caption":"Qyteti bëhet pistë","position":"center center"},
+  {"image":"/images/drag-audi-rs7.jpg","alt":"Audi RS7 e verdhë me vija të zeza në vijën e startit të Drag Race","label":"DRAG RACE","caption":"Fuqi në vijën e startit","position":"center 45%"},
+  {"image":"/images/malore-kulla-formula.jpg","alt":"Formula e verdhë DHL në garën malore në Kullë, Pejë","label":"GARA MALORE","caption":"Shpejtësi pa kompromis","position":"center center"},
+  {"image":"/images/sllallom-prizren-33.jpg","alt":"Veturë e kuqe me numrin 33 para publikut në garën e auto sllallomit në Prizren","label":"AUTO SLLALLOM","caption":"Publiku në çdo kthesë","position":"center center"},
+  {"image":"/images/malore-brezovica-golf.jpg","alt":"Volkswagen Golf i kuq me numrin 31 në garën malore në Brezovicë","label":"GARA MALORE","caption":"Klasikët nuk plaken","position":"center center"},
+  {"image":"/images/karting-sllallom-kone.jpg","alt":"Kart që kalon mes koneve në garën e karting sllallomit","label":"KARTING SLLALLOM","caption":"Pasioni fillon këtu","position":"center center"},
+  {"image":"/images/sllallom-ferizaj-punto.jpg","alt":"Fiat Punto blu me të verdhë në garën e auto sllallomit në Ferizaj","label":"AUTO SLLALLOM","caption":"Çdo metër llogaritet","position":"center center"},
+  {"image":"/images/drag-audi-tt.jpg","alt":"Audi TT vjollcë para publikut në Drag Race","label":"DRAG RACE","caption":"Një komunitet, një pasion","position":"center 50%"},
+  {"image":"/images/malore-brezovica-audi.jpg","alt":"Audi blu me numrin 48 në garën malore në Brezovicë","label":"GARA MALORE","caption":"Përkushtimi bëhet shpejtësi","position":"center center"},
+  {"image":"/images/sllallom-prizren-peugeot.jpg","alt":"Peugeot i verdhë me numrin 34 në garën e auto sllallomit në Prizren, me malet prapa","label":"AUTO SLLALLOM","caption":"Bashkë në çdo kthesë","position":"center center"}
 ]
