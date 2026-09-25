@@ -19,7 +19,8 @@ npm run dev
 | PDFs | `public/documents/` |
 | Optional PDF titles / categories | `data/document-details.json` |
 | Images | `public/images/` |
-| Facebook page URL | `FACEBOOK` in `app/site.tsx` |
+| Homepage slideshow | `data/hero-slides.json` |
+| Facebook page URL | `FACEBOOK` in `app/site.tsx` and `PAGE` in `app/facebook-feed.tsx` |
 
 ### Clubs
 
@@ -45,11 +46,13 @@ When adding PDFs while the development server is already running, run `npm run d
 
 ### Automatic Facebook news
 
-The news page embeds Facebook's Page Plugin timeline for `https://www.facebook.com/FASKKOSOVA`. Facebook supplies the posts dynamically when the page is viewed; there is no manual copying or token in this project. The feed adjusts to the available width and has a reload button and a permanent link to Facebook.
+Both the homepage and news page embed Facebook's Page Plugin timeline for `https://www.facebook.com/FASKKOSOVA` immediately. Facebook supplies the posts dynamically when the page is viewed; there is no manual copying or token in this project. The feed adjusts to the available width, reloads every five minutes while the tab is visible, and has a reload button and a permanent link to Facebook.
 
 Facebook controls availability, login requirements, regional restrictions, cookies and rendering. Browser privacy tools may block the embed. The site provides a direct fallback link and does not falsely report successful post loading. A completely custom card feed that imports Facebook posts reliably would require an authorized Meta API integration with protected credentials; this static project intentionally uses the no-backend embed instead.
 
 ## Build / free static hosting
+
+The homepage rotates through four real photographs every 30 seconds. Edit `data/hero-slides.json` to replace or add images, captions and focal positions. Previous, next and pause controls are included; automatic rotation pauses while the tab is hidden or the controls have keyboard focus, and starts paused when reduced motion is preferred. Page navigation uses ordinary hyperlinks so it also works without JavaScript.
 
 ```sh
 npm run build

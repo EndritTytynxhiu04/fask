@@ -1,0 +1,6 @@
+[
+  {"image":"/images/hero.jpg","alt":"Veturë garuese në një kthesë të garës malore në Kosovë","label":"GARA MALORE","caption":"Çdo sekondë ka rëndësi.","position":"center 54%"},
+  {"image":"/images/hasanaj.jpg","alt":"Veturë Audi me numrin 29 në startin e garës","label":"NË VIJËN E STARTIT","caption":"Përkushtimi bëhet shpejtësi.","position":"center center"},
+  {"image":"/images/karting.png","alt":"Kart i gjelbër në garën e karting sllallomit në Kosovë","label":"KARTING SLLALLOM","caption":"Pasioni fillon këtu.","position":"center center"},
+  {"image":"/images/racing.jpg","alt":"Dy vetura BMW dhe publiku në startin e Drag Race","label":"DRAG RACE","caption":"Një komunitet. Një pasion.","position":"center center"}
+]

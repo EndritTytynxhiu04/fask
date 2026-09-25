@@ -22,4 +22,16 @@ for(const event of calendar.events){
   assert.ok(!Number.isNaN(Date.parse(event.startDate)) && !Number.isNaN(Date.parse(event.endDate)));
   assert.ok(event.endDate >= event.startDate, `Invalid date range: ${event.id}`);
 }
-console.log(`Static checks passed: 6 pages, ${calendar.events.length} calendar events, ${documents.length} PDF(s).`);
+// Catch broken navigation and missing assets in the actual exported HTML.
+for (const route of ['', 'bordi', 'klubet', 'kalendari', 'dokumentet', 'lajmet']) {
+  const html = await fs.readFile(path.join(root, route, 'index.html'), 'utf8');
+  for (const match of html.matchAll(/(?:href|src)="(\/[^"?#]*)(?:[?#][^"]*)?"/g)) {
+    const url = decodeURIComponent(match[1]);
+    const target = path.join(root, url, url.endsWith('/') ? 'index.html' : '');
+    assert.ok((await fs.stat(target)).isFile(), `Missing target on ${route || 'home'}: ${url}`);
+  }
+  if (route === '' || route === 'lajmet') {
+    assert.match(html, /<iframe[^>]+facebook\.com\/plugins\/page\.php/);
+  }
+}
+console.log(`Static checks passed: 6 pages and their links/assets, Facebook embeds, ${calendar.events.length} calendar events, ${documents.length} PDF(s).`);
