@@ -64,6 +64,12 @@ The output folder is `dist/client` (vinext static export). Publish that folder u
 
 Do not publish the project root or `node_modules`; publish only the static output. JSON edits and newly added PDFs require a rebuild and redeploy.
 
+### Netlify
+
+Connect the GitHub repository with `main` as the production branch. The root `netlify.toml` sets the build command, Node version and `dist/client` publish directory automatically, overriding corresponding dashboard settings. No SPA redirect or server adapter is needed because every route is exported to HTML. A successful deploy must contain `index.html` at the root in Netlify's Deploy File Explorer. If automatic deploys are paused, use Deploys > Trigger deploy after pushing.
+
+To connect a domain managed elsewhere, add the domain under Domain management > Production domains, then select Pending DNS verification. Send those records to the domain administrator. Website visibility is managed separately in Netlify; a private project requires Netlify login even after DNS is connected.
+
 ## Image sources
 
 Real racing / federation photography was sourced from Autoportali articles. Attribution and source URLs are in `public/images/sources.json`; the site also credits photos where shown as editorial content. Images are stored locally rather than hotlinked to expiring Facebook URLs. No open reuse license was found; confirm the federation's publication rights for the selected photographs before public launch. Board photos and club logos remain blank until you supply the correct assets.

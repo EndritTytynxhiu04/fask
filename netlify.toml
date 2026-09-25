@@ -1,0 +1,8 @@
+# Publish the static export, rather than the source or dist/server folder.
+[build]
+  base = "."
+  command = "npm run build"
+  publish = "dist/client"
+
+[build.environment]
+  NODE_VERSION = "24"
