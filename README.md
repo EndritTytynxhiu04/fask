@@ -22,7 +22,7 @@ Use `npm run dev` while editing JSON or page styles. Save the file and the local
 | Optional PDF titles / categories | `data/document-details.json` |
 | Images | `public/images/` |
 | Homepage slideshow | `data/hero-slides.json` |
-| Facebook page URL | `FACEBOOK` in `app/site.tsx` and `PAGE` in `app/facebook-feed.tsx` |
+| Facebook page URL | `FACEBOOK` in `app/config.ts` |
 
 ### Clubs
 
@@ -32,11 +32,11 @@ Logo paths are website URLs, not paths relative to the JSON file. For example, `
 
 ### Board
 
-Edit the `members` array in `data/board.json`; add or remove entries as needed. The first entry is visually highlighted as the president. Every entry has a unique `id`, `name`, `role`, `photo`, and `bio`. Leave `photo` empty for the neutral user icon, or use `/images/person.jpg`. Names and roles are explicitly sample content as requested. Set `isDemo` to `false` when ready.
+Edit the `members` array in `data/board.json`; add or remove entries as needed. The first entry is visually highlighted as the president. Every entry has a unique `id`, `name`, `role` and `bio`. Cards are text-only (no photos); `bio` is shown only when filled in. `term` is shown as the board mandate. Set `isDemo` to `false` when ready.
 
 ### Calendar
 
-Edit `data/calendar.json`. Use ISO dates (`YYYY-MM-DD`) for both `startDate` and `endDate`; a single-day event uses the same date twice. Each event has a unique `id`, `name`, `discipline`, `location` and an `organizer`. The top-level `sourceUrl` links to the official calendar post. Events sort chronologically automatically. Change `year`, `note`, and `isComplete` as appropriate. The current calendar contains all 21 events transcribed from the official FASK 2026 calendar image provided through https://www.facebook.com/share/p/19jZmgEb1V/ (canonical post: https://www.facebook.com/FASKKOSOVA/posts/1642118111249817/). The original image is saved at `public/images/calendar-2026.jpg`. The 20 September karting location and Kruja organizer are blank in the source; these were not invented. Dates reflect this published calendar and may be superseded by later announcements. Calendar content does not auto-sync; the news feed does.
+Edit `data/calendar.json`. Use ISO dates (`YYYY-MM-DD`) for both `startDate` and `endDate`; a single-day event uses the same date twice. Each event has a unique `id`, `name`, `discipline`, `location` and an `organizer`. The top-level `sourceUrl` links to the official calendar post. Events sort chronologically automatically. Change `year`, `note`, and `isComplete` as appropriate; `year` also sets the season shown in the header, hero and homepage. Finished races, the next race and its countdown are worked out in the visitor's browser from today's date, so they stay correct without rebuilding. The current calendar contains all 21 events transcribed from the official FASK 2026 calendar image provided through https://www.facebook.com/share/p/19jZmgEb1V/ (canonical post: https://www.facebook.com/FASKKOSOVA/posts/1642118111249817/). The original image is saved at `public/images/calendar-2026.jpg`. The 20 September karting location and Kruja organizer are blank in the source; these were not invented. Dates reflect this published calendar and may be superseded by later announcements. Calendar content does not auto-sync; the news feed does.
 
 ### Documents: drop PDFs into the folder
 
@@ -50,13 +50,13 @@ When adding PDFs while the development server is already running, run `npm run d
 
 ### Automatic Facebook news
 
-Both the homepage and news page embed Facebook's Page Plugin timeline for `https://www.facebook.com/FASKKOSOVA` immediately. Facebook supplies the posts dynamically when the page is viewed; there is no manual copying or token in this project. The feed adjusts to the available width, reloads every five minutes while the tab is visible, and has a reload button and a permanent link to Facebook.
+Both the homepage and news page embed Facebook's Page Plugin timeline for `https://www.facebook.com/FASKKOSOVA` immediately. Facebook supplies the posts dynamically when the page is viewed; there is no manual copying or token in this project. The feed adjusts to the available width and has a reload button and a permanent link to Facebook.
 
 Facebook controls availability, login requirements, regional restrictions, cookies and rendering. Browser privacy tools may block the embed. The site provides a direct fallback link and does not falsely report successful post loading. A completely custom card feed that imports Facebook posts reliably would require an authorized Meta API integration with protected credentials; this static project intentionally uses the no-backend embed instead.
 
 ## Build / free static hosting
 
-The homepage rotates through four real photographs every 30 seconds. Edit `data/hero-slides.json` to replace or add images, captions and focal positions. Previous, next and pause controls are included; automatic rotation pauses while the tab is hidden or the controls have keyboard focus, and starts paused when reduced motion is preferred. Page navigation uses ordinary hyperlinks so it also works without JavaScript.
+The homepage rotates through four real photographs every 7 seconds (`SLIDE_DURATION` in `app/hero.tsx`). Edit `data/hero-slides.json` to replace or add images, captions and focal positions. Previous, next and pause controls are included; automatic rotation pauses while the tab is hidden or the controls have keyboard focus, and starts paused when reduced motion is preferred. Page navigation uses ordinary hyperlinks so it also works without JavaScript.
 
 ```sh
 npm run build

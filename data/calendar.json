@@ -3,7 +3,7 @@
     "isComplete": true,
     "sourceUrl": "https://www.facebook.com/FASKKOSOVA/posts/1642118111249817/",
     "poster": "/images/calendar-2026.jpg",
-    "note": "Datat janë transkriptuar nga kalendari 2026 i publikuar nga FASK. Programi mund të ndryshojë; kontrolloni njoftimet e fundit të organizatorit para garës. Vendi i kartingut më 20 shtator nuk është shënuar në poster.",
+    "note": "",
     "events": [
         { "id": "slalom-ferizaj", "name": "Auto slalom — Ferizaj", "discipline": "Auto slalom", "startDate": "2026-04-26", "endDate": "2026-04-26", "location": "Ferizaj", "organizer": "AK Ferizaj" },
         { "id": "drag-1", "name": "Drag Race — Sllatinë", "discipline": "Drag Race", "startDate": "2026-05-02", "endDate": "2026-05-03", "location": "Sllatinë", "organizer": "Eurogoma RT" },
