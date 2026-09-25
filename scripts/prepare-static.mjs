@@ -40,5 +40,8 @@ assert.equal((clubPage.match(/class="club-card"/g) || []).length, clubs.clubs.le
 const escapeHtml = value => value.replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#x27;'}[char]));
 for (const club of clubs.clubs) {
   assert.ok(clubPage.includes(`<h3>${escapeHtml(club.name)}</h3>`), `Missing club in export: ${club.name}`);
+  if (club.logo && !/^https?:\/\//i.test(club.logo)) {
+    assert.ok(club.logo.startsWith('/') && !club.logo.startsWith('/public/'), `Invalid logo URL for ${club.name}: use /images/... without public or ../`);
+  }
 }
 console.log(`Static checks passed: 6 pages and their links/assets, ${clubs.clubs.length} clubs, Facebook embeds, ${calendar.events.length} calendar events, ${documents.length} PDF(s).`);

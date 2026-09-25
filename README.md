@@ -28,6 +28,8 @@ Use `npm run dev` while editing JSON or page styles. Save the file and the local
 
 Copy an existing object in the `clubs` array to add another club. Give every club a unique `id`. Edit `name`, `city`, `description` and `disciplines`. Leave `logo` and `website` empty if not available. To add a logo, put the actual logo in `public/images/` and set `logo` to `/images/my-club.png`. `website` must be a complete `https://…` URL. Set `isDemo` to `false` once all sample entries are replaced.
 
+Logo paths are website URLs, not paths relative to the JSON file. For example, `public/images/Klubet/DTM.jpg` must be written as `"logo": "/images/Klubet/DTM.jpg"`. Do not include `public` or `../` in the URL. Match filename capitalization exactly for hosting. If using `npm run start`, rebuild after updating these paths; `npm run dev` shows saved changes automatically.
+
 ### Board
 
 Edit the `members` array in `data/board.json`; add or remove entries as needed. The first entry is visually highlighted as the president. Every entry has a unique `id`, `name`, `role`, `photo`, and `bio`. Leave `photo` empty for the neutral user icon, or use `/images/person.jpg`. Names and roles are explicitly sample content as requested. Set `isDemo` to `false` when ready.
