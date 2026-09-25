@@ -1,7 +1,7 @@
 {
     "isDemo": false,
     "clubs": [
-        { "id": "klubi-01", "name": "Auto Klubi Prishtina DTM", "city": "Prishtinë", "disciplines": ["Gara malore", "Auto sllallom", "Karting"], "logo": "/images/Klubet/image.png", "website": "", "description": "" },
+        { "id": "klubi-01", "name": "Auto Klubi Prishtina DTM", "city": "Prishtinë", "disciplines": ["Gara malore", "Auto sllallom", "Karting"], "logo": "/images/Klubet/DTM-PR.png", "website": "", "description": "" },
         { "id": "klubi-02", "name": "Auto Klubi Ferizaj", "city": "Ferizaj", "disciplines": ["Gara malore", "Auto sllallom", "Karting"], "logo": "/images/Klubet/AutoKlubiFerizaj.jpg", "website": "", "description": "" },
         { "id": "klubi-03", "name": "Auto Moto Karting Klubi Prishtinë (PRT)", "city": "Prishtinë", "disciplines": ["Gara malore", "Auto sllallom", "Karting", "E-sport"], "logo": "/images/Klubet/PRT.jpg", "website": "", "description": "" },
         { "id": "klubi-04", "name": "Shoqata Auto Moto Auto Klubi Prizreni D&G", "city": "Prizren", "disciplines": ["Gara malore", "Auto sllallom", "Karting", "E-sport"], "logo": "/images/Klubet/ak Prizren.png", "website": "", "description": "" },
