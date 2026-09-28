@@ -2,15 +2,15 @@
     "isDemo": false,
     "term": "2025–2029",
     "members": [
-        { "id": "kryetar", "name": "Agron Dida", "role": "Kryetar", "photo": "", "bio": "" },
-        { "id": "nenkryetar-1", "name": "Ismet Rexhepi", "role": "Nënkryetar", "photo": "", "bio": "" },
-        { "id": "nenkryetar-2", "name": "Gazmend Gashi", "role": "Nënkryetar", "photo": "", "bio": "" },
-        { "id": "anetar-1", "name": "Faton Hyseni", "role": "Anëtar i bordit", "photo": "", "bio": "" },
-        { "id": "anetar-2", "name": "Bujar Hysenaj", "role": "Anëtar i bordit", "photo": "", "bio": "" },
-        { "id": "anetar-3", "name": "Blerim Gashi", "role": "Anëtar i bordit", "photo": "", "bio": "" },
-        { "id": "anetar-4", "name": "Artan Haradinaj", "role": "Anëtar i bordit", "photo": "", "bio": "" },
-        { "id": "anetar-5", "name": "Faton Tytynxhiu", "role": "Anëtar i bordit", "photo": "", "bio": "" },
-        { "id": "anetar-6", "name": "Arjeta Rysha", "role": "Anëtar i bordit", "photo": "", "bio": "" },
-        { "id": "anetar-7", "name": "Shyqeri Zatriqi", "role": "Anëtar i bordit", "photo": "", "bio": "" }
+        { "id": "kryetar", "name": "Agron Dida", "role": "Kryetar", "photo": "", "bio": "", "contact": "agrondida@hotmail.com"},
+        { "id": "nenkryetar-1", "name": "Ismet Rexhepi", "role": "Nënkryetar", "photo": "", "bio": "", "contact": "ismet@eurogoma.net" },
+        { "id": "nenkryetar-2", "name": "Gazmend Gashi", "role": "Nënkryetar", "photo": "", "bio": "", "contact": "gashigazmend@gmail.com" },
+        { "id": "anetar-1", "name": "Faton Hyseni", "role": "Anëtar i bordit", "photo": "", "bio": "", "contact": "fatonelektro@hotmail.com" },
+        { "id": "anetar-2", "name": "Bujar Hysenaj", "role": "Anëtar i bordit", "photo": "", "bio": "", "contact": "bujar_hysenaj@hotmail.com" },
+        { "id": "anetar-3", "name": "Blerim Gashi", "role": "Anëtar i bordit", "photo": "", "bio": "", "contact": "blerimgashi9@hotmail.com" },
+        { "id": "anetar-4", "name": "Artan Haradinaj", "role": "Anëtar i bordit", "photo": "", "bio": "", "contact": "artanh2015@gmail.com" },
+        { "id": "anetar-5", "name": "Faton Tytynxhiu", "role": "Anëtar i bordit", "photo": "", "bio": "", "contact": "fatont@hotmail.com" },
+        { "id": "anetar-6", "name": "Arjeta Rysha", "role": "Anëtar i bordit", "photo": "", "bio": "", "contact": "arjetar1986@gmail.com" },
+        { "id": "anetar-7", "name": "Shyqeri Zatriqi", "role": "Anëtar i bordit", "photo": "", "bio": "", "contact": "shyqarally67@gmail.com" }
     ]
 }

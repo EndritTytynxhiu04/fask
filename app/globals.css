@@ -219,10 +219,24 @@ footer{background:#0a0b0c;color:var(--ink);border-top:1px solid var(--line)}
 .member-card.president h3{font-size:clamp(2.6rem,5vw,4rem);font-style:italic;font-weight:800}
 .member-card.president .member-number{font-size:7rem;top:14px;right:30px;color:#f7d34822}
 .board-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.contact-link{display:inline-flex;align-items:center;gap:8px;align-self:flex-start;max-width:100%;margin-top:14px;padding:0;border:0;background:none;font:inherit;font-size:.875rem;text-align:left;color:var(--muted);overflow-wrap:anywhere;cursor:pointer;transition:color .2s}
+.email-dialog{max-width:min(440px,calc(100vw - 32px));padding:30px;gap:0;border-radius:16px;background:var(--surface);color:var(--ink);box-shadow:0 0 0 1px var(--line-strong),0 30px 80px #000c}
+.email-dialog [data-slot=dialog-close]{top:14px;right:14px;color:var(--muted)}
+.email-dialog-title{margin:10px 0 6px;font-family:var(--font-display);font-size:1.6rem;font-weight:800;line-height:1.15}
+.email-dialog-address{color:var(--muted);font-size:.95rem;overflow-wrap:anywhere}
+.email-options{display:grid;gap:10px;margin-top:24px}
+.email-options>*{display:flex;justify-content:space-between;align-items:center;gap:12px;width:100%;padding:14px 16px;border:1px solid var(--line-strong);border-radius:var(--radius-sm);background:var(--surface-2);color:var(--ink);font:inherit;font-weight:600;text-align:left;cursor:pointer;transition:border-color .2s,color .2s}
+.email-options>*:hover,.email-options>*:focus-visible{border-color:var(--yellow-line);color:var(--yellow);outline:none}
+.email-options svg{flex-shrink:0;color:var(--yellow)}
+.contact-link svg{flex-shrink:0;color:var(--yellow)}
+.contact-link:hover,.member-card:hover .contact-link,.club-card:hover .contact-link{color:var(--yellow)}
+.contact-link:after{content:'';position:absolute;inset:0;z-index:1;border-radius:inherit}
+.contact-link:focus-visible{outline:none}
+.contact-link:focus-visible:after{outline:2px solid var(--yellow);outline-offset:-2px;border-radius:var(--radius)}
 
 /* ---------- Clubs ---------- */
 .clubs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.club-card{display:flex;flex-direction:column;padding:28px;border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);transition:border-color .25s,background .25s,transform .25s}
+.club-card{position:relative;display:flex;flex-direction:column;padding:28px;border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);transition:border-color .25s,background .25s,transform .25s}
 .club-card:hover{border-color:var(--yellow-line);background:var(--surface-hover);transform:translateY(-3px)}
 .club-card-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:24px}
 .club-logo{width:72px;height:72px;object-fit:contain;padding:6px;border-radius:var(--radius-sm);background:#fff}
@@ -232,7 +246,8 @@ footer{background:#0a0b0c;color:var(--ink);border-top:1px solid var(--line)}
 .club-card h3{font-size:1.2rem;line-height:1.3;margin-bottom:10px}
 .club-card p{font-size:.95rem;color:var(--muted);margin-top:16px}
 .club-card .chips{margin-top:auto;padding-top:22px}
-.club-card>.text-link{margin-top:18px}
+.club-card>.contact-link{margin-top:18px}
+.club-card>.text-link{position:relative;z-index:2;margin-top:18px}
 
 /* ---------- Calendar ---------- */
 .calendar-toolbar{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px 24px;margin-bottom:28px}
@@ -371,18 +386,26 @@ footer{background:#0a0b0c;color:var(--ink);border-top:1px solid var(--line)}
 /* ---------- Documents ---------- */
 .documents-layout{display:grid;grid-template-columns:1.6fr 1fr;gap:56px;align-items:start}
 .document-panel{padding:40px;border:1px solid var(--line);border-radius:var(--radius);background:var(--surface)}
-.document-icon{display:flex;align-items:center;justify-content:center;width:66px;height:66px;margin-bottom:24px;border-radius:var(--radius-sm);background:var(--yellow-soft);border:1px solid var(--yellow-line);color:var(--yellow)}
-.document-panel h2{font-size:2.4rem;font-style:italic;margin-bottom:14px}
-.document-panel>p{max-width:560px}
-.document-panel label{display:block;margin:30px 0 10px;font-size:.875rem;font-weight:700}
+.document-toolbar{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:12px;margin-bottom:12px}
+.document-search{width:100%;height:50px;padding:0 16px;border:1px solid var(--line-strong);border-radius:var(--radius-sm);background:var(--surface-2);color:var(--ink);font:inherit;font-size:1rem}
+.document-search::placeholder{color:var(--faint)}
+.document-search:focus{outline:none;border-color:var(--yellow-line)}
 .document-select{width:100%}
-.document-select select{height:54px;padding-left:16px;border-radius:var(--radius-sm);border-color:var(--line-strong);background:var(--surface-2);color:var(--ink);font-size:1rem;white-space:normal;cursor:pointer}
-.document-selection{min-height:110px;margin-top:28px;padding-top:28px;border-top:1px solid var(--line)}
-.document-selection h3{font-size:1.3rem;margin:12px 0}
-.file-meta{font-size:.875rem;color:var(--muted)}
-.document-actions{display:flex;flex-wrap:wrap;align-items:center;gap:24px;margin-top:24px}
-.selection-hint{display:flex;gap:15px;align-items:center;font-size:.875rem;color:var(--muted)}
-.source-link{display:inline-block;margin-top:20px;font-size:.75rem;color:var(--muted);text-decoration:underline}
+.document-select select{height:50px;padding-left:16px;border-radius:var(--radius-sm);border-color:var(--line-strong);background:var(--surface-2);color:var(--ink);font-size:1rem;white-space:normal;cursor:pointer}
+.document-group{margin-top:30px}
+.document-group-title{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding-bottom:12px;border-bottom:1px solid var(--line);font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:var(--yellow)}
+.document-group-title span{color:var(--faint)}
+.document-list{margin:0;padding:0;list-style:none}
+.document-item{display:flex;align-items:center;gap:16px;padding:16px 0;border-bottom:1px solid var(--line)}
+.document-item-icon{display:flex;align-items:center;justify-content:center;flex-shrink:0;width:42px;height:42px;border-radius:var(--radius-sm);background:var(--yellow-soft);border:1px solid var(--yellow-line);color:var(--yellow)}
+.document-item-main{display:flex;flex-direction:column;gap:3px;flex:1;min-width:0}
+.document-item-title{font-weight:600;line-height:1.35;color:var(--ink);transition:color .2s}
+.document-item-title:hover{color:var(--yellow)}
+.document-item-actions{display:flex;align-items:center;gap:18px;flex-shrink:0}
+.document-download{display:flex;align-items:center;justify-content:center;width:40px;height:40px;border:1px solid var(--line-strong);border-radius:var(--radius-sm);color:var(--ink);transition:border-color .2s,color .2s,background .2s}
+.document-download:hover{border-color:var(--yellow);background:var(--yellow);color:#111}
+.file-meta{font-size:.8rem;color:var(--muted)}
+.source-link{font-size:.8rem;color:var(--muted);text-decoration:underline}
 .documents-aside{padding:30px 0}
 .documents-aside>strong{display:block;margin-top:14px;font-family:var(--font-display);font-size:7rem;font-weight:900;font-style:italic;line-height:1;color:var(--yellow)}
 .documents-aside>span:not(.eyebrow){color:var(--muted)}
@@ -513,8 +536,12 @@ footer{background:#0a0b0c;color:var(--ink);border-top:1px solid var(--line)}
   .member-card{min-height:150px}
   .footer-main{grid-template-columns:1fr}
   .event-badge{margin-left:0}
-  .document-actions{flex-direction:column;align-items:flex-start}
-  .document-panel h2{font-size:2rem}
+  .document-panel{padding:20px}
+  .document-toolbar{grid-template-columns:1fr}
+  .document-item{align-items:flex-start;gap:12px}
+  .document-item-icon{display:none}
+  .document-item-actions{gap:12px}
+  .document-item-actions .text-link{display:none}
 }
 @media(prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
